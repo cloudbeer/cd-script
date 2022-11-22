@@ -9,4 +9,4 @@ resources:
 - service.yaml
 images:
 - name: 320236118172.dkr.ecr.us-east-2.amazonaws.com/gateway
-  newTag: 5e8ed56a
+  newTag: 4a0e5355
