@@ -9,4 +9,4 @@ resources:
   - service.yaml
 images:
   - name: nginx
-    newTag: "1.16"
+    newTag: "1.17"
