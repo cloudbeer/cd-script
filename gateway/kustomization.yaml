@@ -5,5 +5,8 @@ metadata:
 commonLabels:
   app: gateway
 resources:
-  - deployment.yaml
-  - service.yaml
+- deployment.yaml
+- service.yaml
+images:
+- name: 320236118172.dkr.ecr.us-east-2.amazonaws.com/gateway
+  newTag: 620ad04f
