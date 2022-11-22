@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: gateway
+  namespace: argocd
+spec:
+  project: default
+  destination:
+    namespace: test
+    server: "https://kubernetes.default.svc"
+  source:
+    repoURL: "https://github.com/swire-aws/cd-script.git"
+    targetRevision: HEAD
+    path: gateway
+  syncPolicy:
+    automated:
+      prune: true
