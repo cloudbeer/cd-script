@@ -1,0 +1,22 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: nginx
+  namespace: argocd
+  annotations:
+    notifications.argoproj.io/subscribe.on-sync-succeeded.gmail: cloudbeer@gmail.com;19568205@qq.com
+    notifications.argoproj.io/subscribe.on-sync-failed.gmail: cloudbeer@gmail.com;19568205@qq.com
+    notifications.argoproj.io/subscribe.on-sync-status-unknown.gmail: cloudbeer@gmail.com;19568205@qq.com
+spec:
+  project: default
+  destination:
+    namespace: test
+    server: "https://kubernetes.default.svc"
+  source:
+    repoURL: "https://github.com/swire-aws/cd-script.git"
+    targetRevision: HEAD
+    path: nginx
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
