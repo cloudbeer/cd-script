@@ -4,9 +4,16 @@ metadata:
   name: nginx
   namespace: argocd
   annotations:
+<<<<<<< HEAD
     notifications.argoproj.io/subscribe.on-sync-succeeded.swire: dongzhuoming2018@gmail.com
     notifications.argoproj.io/subscribe.on-sync-failed.swire: dongzhuoming2018@gmail.com
     notifications.argoproj.io/subscribe.on-sync-status-unknown.swire: dongzhuoming2018@gmail.com
+=======
+    notifications.argoproj.io/subscribe.on-sync-succeeded.gmail: dongzhuoming2018@gmail.com
+    notifications.argoproj.io/subscribe.on-sync-failed.gmail: dongzhuoming2018@gmail.com
+    notifications.argoproj.io/subscribe.on-sync-status-unknown.gmail: dongzhuoming2018@gmail.com
+    notifications.argoproj.io/subscribe.on-deployed.gmail: cloudbeer@hotmail.com
+>>>>>>> 689fc9e (update ingress)
 spec:
   project: default
   destination:
@@ -17,6 +24,6 @@ spec:
     targetRevision: HEAD
     path: nginx
   syncPolicy:
-    automated:
-      prune: true
-      selfHeal: true
+    automated: {}
+  # prune: true
+  # selfHeal: true
