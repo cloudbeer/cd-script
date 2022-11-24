@@ -4,9 +4,9 @@ metadata:
   name: nginx
   namespace: argocd
   annotations:
-    notifications.argoproj.io/subscribe.on-sync-succeeded.gmail: cloudbeer@gmail.com;19568205@qq.com
-    notifications.argoproj.io/subscribe.on-sync-failed.gmail: cloudbeer@gmail.com;19568205@qq.com
-    notifications.argoproj.io/subscribe.on-sync-status-unknown.gmail: cloudbeer@gmail.com;19568205@qq.com
+    notifications.argoproj.io/subscribe.on-sync-succeeded.swire: dongzhuoming2018@gmail.com
+    notifications.argoproj.io/subscribe.on-sync-failed.swire: dongzhuoming2018@gmail.com
+    notifications.argoproj.io/subscribe.on-sync-status-unknown.swire: dongzhuoming2018@gmail.com
 spec:
   project: default
   destination:
