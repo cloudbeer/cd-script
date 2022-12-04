@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: gateway
-          image: 320236118172.dkr.ecr.us-east-2.amazonaws.com/gateway
+          image: cloudbeer/gateway
           command:
             - java
             - -jar

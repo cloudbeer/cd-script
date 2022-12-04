@@ -9,7 +9,7 @@ spec:
     namespace: test
     server: "https://kubernetes.default.svc"
   source:
-    repoURL: "https://github.com/swire-aws/cd-script.git"
+    repoURL: "https://github.com/cloudbeer/cd-script.git"
     targetRevision: HEAD
     path: gateway
   syncPolicy:
