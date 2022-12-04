@@ -9,4 +9,4 @@ resources:
 - service.yaml
 images:
 - name: cloudbeer/gateway
-  newTag: 4a0e5355
+  newTag: 410c4789
