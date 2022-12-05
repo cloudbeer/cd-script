@@ -1,13 +1,13 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 metadata:
-  name: gateway
+  name: nginx
 commonLabels:
-  app: gateway
+  app: nginx
 resources:
   - deployment.yaml
   - service.yaml
   - ingress.yaml
 images:
   - name: nginx
-    newTag: "1.17"
+    newTag: "1.18"
