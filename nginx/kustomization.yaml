@@ -7,6 +7,7 @@ commonLabels:
 resources:
   - deployment.yaml
   - service.yaml
+  - ingress.yaml
 images:
   - name: nginx
     newTag: "1.17"
