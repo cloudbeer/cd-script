@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: nginx
-  namespace: argocd
+  namespace: default
   annotations:
     notifications.argoproj.io/subscribe.on-sync-succeeded.gmail: cloudbeer@hotmail.com
     notifications.argoproj.io/subscribe.on-sync-failed.gmail: cloudbeer@hotmail.com
@@ -11,13 +11,13 @@ metadata:
 spec:
   project: default
   destination:
-    namespace: test
+    namespace: default
     server: "https://kubernetes.default.svc"
   source:
     repoURL: "https://github.com/cloudbeer/cd-script.git"
     targetRevision: HEAD
     path: nginx
   syncPolicy:
-    automated: {}
-  # prune: true
-  # selfHeal: true
+    automated:
+      prune: true
+      selfHeal: true
