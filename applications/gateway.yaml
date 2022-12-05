@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   destination:
-    namespace: test
+    namespace: default
     server: "https://kubernetes.default.svc"
   source:
     repoURL: "https://github.com/cloudbeer/cd-script.git"
